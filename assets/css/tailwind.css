@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'Thunder';
+    src: url('/assets/fonts/Thunder-BoldLC.woff2') format('woff2'),
+        url('/assets/fonts/Thunder-BoldLC.woff') format('woff'),
+        url('/assets/fonts/Thunder-BoldLC.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@theme{
+  --color-offwhite: #F9F9F9;
+  --color-primary: #0F4ABE;
+  --color-gray: #404040;
+
+  --font-thunder: "Thunder", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+.inter-tite {
+  font-family: "Inter Tight", sans-serif;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1535px;
+  width: 100%;
+  margin: auto;
+  padding-inline: 20px;
+}
+
+@media (max-width:640px) {
+  .container {
+    padding-inline: 16px;
+  }
+}
+
+
+
+@layer base {
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+.section-padding {
+  padding-block: 136px;
+}
+
+@media (max-width:1024px) {
+  .section-padding {
+    padding-block: 100px;
+  }
+}
+
+@media (max-width:640px) {
+  .section-padding {
+    padding-block: 60px;
+  }
+}
+
+
+
+/* =========================
+   CSS RESET / BASE
+========================= */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin & padding */
+
+/* HTML & body */
+body {
+  height: 100%;
+  font-family: "Jakarta", sans-serif;
+}
+
+
+
+/* Remove link underline */
+a {
+  text-decoration: none;
+}
+
+/* Images responsive */
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  display: block;
+}
+
+/* Form elements inherit font */
+
+
+/* Button cursor */
+button {
+  cursor: pointer;
+}
+
+/* Table reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* main css */
+.stroke-text{
+  -webkit-text-stroke: 2px var(--color-primary);
+}
+
+
+
+
+
+
+

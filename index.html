@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asraful Houqe</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="h-screen flex flex-col">
+      <!-- Navbar -->
+      <header class="container flex justify-between items-center px-10 py-5">
+        <a href="index.html" class="flex items-center gap-2 font-inter">
+          <div class="w-8 h-8 rounded-full bg-gray">
+            <img
+              src="/public/profile_image.png"
+              alt="profile-img"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+          <span class="font-semibold inter-tite text-2xl text-gray">
+            Asraful Hoque
+          </span>
+        </a>
+
+        <nav class="flex gap-15.25 text-lg font-medium text-gray font-jakarta">
+          <a href="#" class="hidden md:block hover:text-primary uppercase"
+            >WORK</a
+          >
+          <a href="#" class="hidden md:block hover:text-primary uppercase"
+            >ABOUT</a
+          >
+          <a href="#" class="block hover:text-primary uppercase">DOWNLOAD CV</a>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section
+        class="flex-1 flex md:items-center justify-center whitespace-nowrap overflow-hidden md:overflow-visible relative"
+      >
+        <div class="mt-25 md:mt-0 px-6 mx-auto text-center">
+          <div class="">
+            <h3 class="text-gray inter-tite font-normal text-3xl  md:text-4xl ">
+            Hi, My name is Asraful Hoque
+          </h3>
+          </div>
+
+          <div class="mt-40 relative inline-block">
+            <h1
+              class="text-primary font-thunder text-[120px] sm:text-[160px] md:text-[200px] lg:text-[236px] font-bold uppercase leading-none relative z-10"
+            >
+              Product Designer
+            </h1>
+
+            <!-- CENTER IMAGE -->
+            <img
+              src="/public/hero_bg.png"
+              alt="hero-bg-img"
+              class="absolute left-1/2 top-[43%] -translate-x-1/2 -translate-y-1/2 w-auto max-h-[500px] lg:max-h-[700px] z-20"
+            />
+            <h2
+              class="font-bold text-[120px] sm:text-[160px] md:text-[200px] lg:text-[236px] font-thunder text-transparent stroke-text leading-none mt-20px md:-mt-10 uppercase relative z-60"
+            >
+              And Frammer Designer
+            </h2>
+            <div
+              class="absolute hidden md:block bottom-0 right-0 inter-tite text-gray text-right text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-normal z-60"
+            >
+              <p>Based in London, UK</p>
+            </div>
+          </div>
+
+          <!-- White fade effect -->
+          <div
+            class="absolute inset-x-0 bottom-30 md:-bottom-4 h-[50%] bg-gradient-to-t from-white via-white via-30% to-transparent blur-sm z-50"
+          ></div>
+
+          <!-- Buttons -->
+          <div
+            class="mt-10  sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center  gap-3 sm:gap-5.5 relative z-80"
+          >
+            <a
+              href="#"
+              class="w-100 md:w-auto bg-primary text-white inter-tite text-base sm:text-lg font-medium leading-[112%] px-6 sm:px-10 py-3.5 sm:py-3.75 relative overflow-hidden border border-transparent transition-all duration-500 hover:bg-white hover:text-primary hover:border-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
+            >
+              <span class="relative z-10">View My Work</span>
+            </a>
+
+            <button
+              class="w-100 md:w-auto border border-primary text-primary inter-tite text-base sm:text-lg font-medium leading-[112%] px-6 py-3.5 relative overflow-hidden transition-all duration-500 hover:bg-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
+            >
+              <span class="relative z-10">Download Resume</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
