@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @layer properties;
+@font-face {
+  font-family: 'Thunder';
+  src: url('/assets/fonts/Thunder-BoldLC.woff2') format('woff2'), url('/assets/fonts/Thunder-BoldLC.woff') format('woff'), url('/assets/fonts/Thunder-BoldLC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -9,6 +16,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #090909;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -24,6 +32,8 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -37,6 +47,7 @@
     --color-offwhite2: #D7D7D7;
     --color-primary: #0F4ABE;
     --color-gray: #404040;
+    --color-gray2: #3F3F3F;
   }
 }
 @layer base {
@@ -272,6 +283,21 @@
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
   .block {
     display: block;
   }
@@ -289,6 +315,9 @@
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+  .h-18 {
+    height: calc(var(--spacing) * 18);
   }
   .h-\[50\%\] {
     height: 50%;
@@ -308,6 +337,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-18 {
+    width: calc(var(--spacing) * 18);
+  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
@@ -316,6 +348,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-103 {
+    max-width: calc(var(--spacing) * 103);
+  }
+  .max-w-157\.5 {
+    max-width: calc(var(--spacing) * 157.5);
   }
   .flex-1 {
     flex: 1;
@@ -383,6 +421,9 @@
   .bg-primary {
     background-color: var(--color-primary);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .bg-gradient-to-t {
     --tw-gradient-position: to top in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -424,6 +465,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
   .text-center {
     text-align: center;
   }
@@ -437,6 +481,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -467,6 +515,14 @@
     --tw-leading: 112%;
     line-height: 112%;
   }
+  .leading-\[136\%\] {
+    --tw-leading: 136%;
+    line-height: 136%;
+  }
+  .leading-\[139\%\] {
+    --tw-leading: 139%;
+    line-height: 139%;
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -495,6 +551,12 @@
   }
   .text-gray {
     color: var(--color-gray);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-gray2 {
+    color: var(--color-gray2);
   }
   .text-primary {
     color: var(--color-primary);
@@ -700,6 +762,11 @@
       width: auto;
     }
   }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
   .md\:items-center {
     @media (width >= 48rem) {
       align-items: center;
@@ -726,6 +793,16 @@
       font-size: 28px;
     }
   }
+  .md\:text-\[32px\] {
+    @media (width >= 48rem) {
+      font-size: 32px;
+    }
+  }
+  .md\:text-\[136px\] {
+    @media (width >= 48rem) {
+      font-size: 136px;
+    }
+  }
   .md\:text-\[200px\] {
     @media (width >= 48rem) {
       font-size: 200px;
@@ -746,13 +823,6 @@
       font-size: 236px;
     }
   }
-}
-@font-face {
-  font-family: 'Thunder';
-  src: url('/assets/fonts/Thunder-BoldLC.woff2') format('woff2'), url('/assets/fonts/Thunder-BoldLC.woff') format('woff'), url('/assets/fonts/Thunder-BoldLC.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
 }
 html {
   scroll-behavior: smooth;

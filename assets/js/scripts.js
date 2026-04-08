@@ -6,7 +6,7 @@ document.querySelectorAll(".counter").forEach((counter) => {
 
   gsap.to(obj, {
     val: target,
-    duration: 5,
+    duration: 4,
     ease: "power2.out",
     scrollTrigger: {
       trigger: counter,
