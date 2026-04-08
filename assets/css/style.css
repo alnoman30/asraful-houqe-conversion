@@ -37,8 +37,6 @@
     --color-offwhite2: #D7D7D7;
     --color-primary: #0F4ABE;
     --color-gray: #404040;
-    --font-thunder: "Thunder", sans-serif;
-    --font-jakarta: "Plus Jakarta Sans", sans-serif;
   }
 }
 @layer base {
@@ -432,12 +430,6 @@
   .text-right {
     text-align: right;
   }
-  .font-jakarta {
-    font-family: var(--font-jakarta);
-  }
-  .font-thunder {
-    font-family: var(--font-thunder);
-  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -805,7 +797,7 @@ body {
 .inter-tight {
   font-family: "Inter Tight", sans-serif;
 }
-.font-thunder {
+.thunder {
   font-family: "Thunder", sans-serif;
 }
 .jakarta {
