@@ -41,3 +41,18 @@ document.querySelectorAll(".counter").forEach((counter) => {
   });
 });
 
+
+// text animation
+const link = document.querySelector(".group");
+const track = link.querySelector(".mask-track");
+
+const tl = gsap.timeline({ paused: true });
+
+tl.to(track, {
+  y: "-50%", // move exactly one text height (since 2 items stacked)
+  duration: 0.4,
+  ease: "power2.out"
+});
+
+link.addEventListener("mouseenter", () => tl.play());
+link.addEventListener("mouseleave", () => tl.reverse());

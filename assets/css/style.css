@@ -330,6 +330,9 @@
   .inline-block {
     display: inline-block;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -994,6 +997,19 @@ table {
 }
 .stroke-text {
   -webkit-text-stroke: 2px var(--color-primary);
+}
+.mask-wrap {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+}
+.mask-track {
+  display: flex;
+  flex-direction: column;
+}
+.mask-track span {
+  display: block;
+  line-height: 1.5em;
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -146,6 +146,22 @@ table {
 }
 
 
+.mask-wrap {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em; /* match text height */
+}
+
+.mask-track {
+  display: flex;
+  flex-direction: column;
+}
+
+.mask-track span {
+  display: block;
+  line-height: 1.5em;
+}
+
 
 
 
