@@ -3,9 +3,9 @@
 
 @font-face {
     font-family: 'Thunder';
-    src: url('/assets/fonts/Thunder-BoldLC.woff2') format('woff2'),
-        url('/assets/fonts/Thunder-BoldLC.woff') format('woff'),
-        url('/assets/fonts/Thunder-BoldLC.ttf') format('truetype');
+    src: url('../fonts/Thunder-BoldLC.woff2') format('woff2'),
+        url('../fonts/Thunder-BoldLC.woff') format('woff'),
+        url('../fonts/Thunder-BoldLC.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
