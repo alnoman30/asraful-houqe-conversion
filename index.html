@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asraful Houqe</title>
+    <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <div class="h-screen flex flex-col">
+    <div class="h-screen flex flex-col bg-offwhite">
       <!-- Navbar -->
-      <header class="container flex justify-between items-center px-10 py-5">
+      <header
+        class="container flex justify-between items-center px-10 py-5 bg-offwhite"
+      >
         <a href="index.html" class="flex items-center gap-2 font-inter">
           <div class="w-8 h-8 rounded-full bg-gray">
             <img
-              src="/public/profile_image.png"
+              src="assets/images/profile_image.png"
               alt="profile-img"
               class="w-full h-full object-cover rounded-full"
             />
@@ -38,13 +42,13 @@
 
       <!-- Hero Section -->
       <section
-        class="flex-1 flex md:items-center justify-center whitespace-nowrap overflow-hidden md:overflow-visible relative"
+        class="flex-1 flex md:items-center justify-center whitespace-nowrap overflow-hidden md:overflow-visible relative bg-offwhite"
       >
         <div class="mt-25 md:mt-0 px-6 mx-auto text-center">
           <div class="">
-            <h3 class="text-gray inter-tite font-normal text-3xl  md:text-4xl ">
-            Hi, My name is Asraful Hoque
-          </h3>
+            <h3 class="text-gray inter-tite font-normal text-3xl md:text-4xl">
+              Hi, My name is Asraful Hoque
+            </h3>
           </div>
 
           <div class="mt-40 relative inline-block">
@@ -56,9 +60,9 @@
 
             <!-- CENTER IMAGE -->
             <img
-              src="/public/hero_bg.png"
+              src="assets/images/hero_bg.png"
               alt="hero-bg-img"
-              class="absolute left-1/2 top-[43%] -translate-x-1/2 -translate-y-1/2 w-auto max-h-[500px] lg:max-h-[700px] z-20"
+              class="absolute left-1/2 top-[43%] -translate-x-1/2 -translate-y-1/2 w-auto max-h-125 lg:max-h-175 z-20"
             />
             <h2
               class="font-bold text-[120px] sm:text-[160px] md:text-[200px] lg:text-[236px] font-thunder text-transparent stroke-text leading-none mt-20px md:-mt-10 uppercase relative z-60"
@@ -74,12 +78,12 @@
 
           <!-- White fade effect -->
           <div
-            class="absolute inset-x-0 bottom-30 md:-bottom-4 h-[50%] bg-gradient-to-t from-white via-white via-30% to-transparent blur-sm z-50"
+            class="absolute inset-x-0 bottom-30 md:bottom-0 h-[50%] bg-gradient-to-t from-white via-white via-30% to-transparent blur-sm z-50"
           ></div>
 
           <!-- Buttons -->
           <div
-            class="mt-10  sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center  gap-3 sm:gap-5.5 relative z-80"
+            class="mt-10 sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5.5 relative z-80"
           >
             <a
               href="#"
@@ -97,6 +101,67 @@
         </div>
       </section>
     </div>
+
+    <!-- Counter section  -->
+
+    <section class=" bg-offwhite -mt-37.5 md:mt-0">
+      <div class="container mx-auto px-4 py-2 md:py-14 relative z-99">
+        <div
+          class="grid grid-cols-3 gap-10 sm:gap-20 text-center"
+        >
+          <!-- Years Experience -->
+          <div class="sm:border-r border-offwhite2">
+            <h2
+              class="counter font-bold font-thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              data-target="7"
+            >
+              0
+            </h2>
+            <p
+              class="mt-2 text-xl inter-tite font-medium capitalize text-black"
+            >
+              Years Experience
+            </p>
+          </div>
+
+          <!-- Projects Delivered -->
+          <div class="sm:border-r border-offwhite2">
+            <h2
+              class="counter font-bold font-thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              data-target="50"
+            >
+              0
+            </h2>
+            <p
+              class="mt-2 text-xl inter-tite font-medium capitalize text-black"
+            >
+              Projects Delivered
+            </p>
+          </div>
+
+          <!-- Happy Clients -->
+          <div>
+            <h2
+              class="counter font-bold font-thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              data-target="30"
+            >
+              0
+            </h2>
+            <p
+              class="mt-2 text-xl inter-tite font-medium capitalize text-black"
+            >
+              Happy Clients
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-[100px]"></section>
+    <section class="h-[100px]"></section>
+    <section class="h-[100px]"></section>
+    <section class="h-[100px]"></section>
+    <section class="h-[100px]"></section>
 
     <script src="assets/js/scripts.js"></script>
   </body>

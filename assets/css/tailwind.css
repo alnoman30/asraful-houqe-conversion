@@ -15,9 +15,11 @@
 
 
 @theme{
-  --color-offwhite: #F9F9F9;
+  --color-offwhite: #F6F6F6;
+  --color-offwhite2: #D7D7D7;
   --color-primary: #0F4ABE;
   --color-gray: #404040;
+  --color-black: #090909;
 
   --font-thunder: "Thunder", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
@@ -26,6 +28,7 @@
 .inter-tite {
   font-family: "Inter Tight", sans-serif;
 }
+
 
 
 
