@@ -25,9 +25,6 @@
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
 }
 
-.inter-tite {
-  font-family: "Inter Tight", sans-serif;
-}
 
 
 
@@ -95,9 +92,20 @@ html {
 /* HTML & body */
 body {
   height: 100%;
-  font-family: "Jakarta", sans-serif;
+  font-family: "Inter Tight", sans-serif;
 }
 
+/* font family */
+.inter-tight {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.font-thunder{
+  font-family: "Thunder", sans-serif;
+}
+.jakarta{
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 
 
 /* Remove link underline */
