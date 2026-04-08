@@ -19,7 +19,8 @@
   --color-primary: #0F4ABE;
   --color-gray: #404040;
   --color-gray2: #3F3F3F;
-  --color-black: #090909;
+  ---color-black: #000;
+  --color-black2: #090909;
 
   --font-thunder: "Thunder", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
@@ -93,6 +94,7 @@ html {
 body {
   height: 100%;
   font-family: "Inter Tight", sans-serif;
+  overflow-x: hidden;
 }
 
 /* font family */
@@ -136,11 +138,6 @@ table {
   border-spacing: 0;
 }
 
-:root {
-  --text-color: transparent;
-  --text-stroke-color: #0F4ABE;
-  --text-fill-color: #0F4ABE;
-}
 
 
 /* main css */
@@ -148,23 +145,6 @@ table {
   -webkit-text-stroke: 2px var(--color-primary);
 }
 
-
-.text-fill {
-  background: linear-gradient(
-      to right,
-      var(--text-fill-color),
-      var(--text-fill-color)
-    )
-    no-repeat;
-  -webkit-background-clip: text;
-  line-height: 100%;
-  background-clip: text;
-  background-size: 0%;
-  color: var(--text-color);
-  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
-  -webkit-text-stroke: 2px var(--text-stroke-color);
-  text-stroke: 2px var(--text-stroke-color);
-}
 
 
 

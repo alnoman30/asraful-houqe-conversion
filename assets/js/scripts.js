@@ -1,65 +1,43 @@
+// Register GSAP plugin (removed ScrollSmoother to avoid conflict with Lenis)
 gsap.registerPlugin(ScrollTrigger);
 
-// Counter js
+// ── Smooth scroll (Lenis) ──
+let lenis;
+
+if (typeof Lenis !== "undefined") {
+  lenis = new Lenis({
+    duration: 1.4,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    wheelMultiplier: 1.3,
+  });
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+}
+
+// ── Counter Animation ──
 document.querySelectorAll(".counter").forEach((counter) => {
-  let target = +counter.getAttribute("data-target");
-  let obj = { val: 0 };
+  const target = +counter.getAttribute("data-target");
+  const obj = { val: 0 };
 
   gsap.to(obj, {
     val: target,
-    duration: 4,
+    duration: 2,
     ease: "power2.out",
     scrollTrigger: {
       trigger: counter,
       start: "top 80%",
-      end: "top 20%",
-      toggleActions: "restart none restart none",
+      toggleActions: "play none none none",
     },
     onUpdate: function () {
-      counter.innerText = Math.floor(obj.val) + "+";
+      counter.innerText = Math.floor(obj.val).toLocaleString() + "+";
     },
   });
 });
 
-// Core expertise section: Heading fill animation
-gsap.set(".text-fill", {
-  backgroundSize: "0%"
-});
-const textElements = gsap.utils.toArray(".text-fill");
-
-textElements.forEach((text) => {
-  gsap.fromTo(
-    text,
-    { backgroundSize: "0%" },
-    {
-      backgroundSize: "100%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: text,
-        start: "top 90%",
-        end: "center 50%",
-        scrub: true,
-      }
-    }
-  );
-});
-
-gsap.utils.toArray(".expertise-card").forEach((card, i) => {
-    gsap.fromTo(
-      card,
-      { opacity: 0, y: 50, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1,
-        delay: i * 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  });
