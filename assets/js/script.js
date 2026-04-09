@@ -68,45 +68,44 @@ if (typeof Lenis !== 'undefined') {
 
 // 
 
-const splide = new Splide('#testimonial-slider', {
-  type: 'loop',
-  perPage: 1,
-  arrows: true,
+// Testimonial slider
+const testimonial = new Splide('#testimonial-slider', {
+  type: 'fade',
+  rewind: true,
   pagination: false,
-  drag: 'free',
-  snap: true,
-  speed: 400,
-  easing: 'linear',
+  arrows: false,
+  speed: 400, // base speed
 });
 
-const nav = document.getElementById('avatar-nav');
-const avatars = Array.from(nav.querySelectorAll('img')); // grab all images
-
-const updateAvatars = (activeIndex) => {
-  avatars.forEach((img, i) => {
-    if (i === activeIndex) {
-      img.classList.add('scale-125', 'opacity-100');
-      img.classList.remove('scale-90', 'opacity-40');
-    } else {
-      img.classList.add('scale-90', 'opacity-40');
-      img.classList.remove('scale-125', 'opacity-100');
-    }
-  });
-};
-
-const fade = (slide) =>
-  gsap.fromTo(slide, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" });
-
-splide.on('mounted active', () => {
-  const active = splide.index % avatars.length; // make sure it loops properly
-  updateAvatars(active);
-  fade(splide.Components.Elements.slides[splide.index]);
+// Avatar navigation slider
+const avatars = new Splide('#avatar-slider', {
+  type: 'slide',
+  perPage: 3,
+  focus: 'center',
+  gap: '-10px',
+  rewind: true,
+  isNavigation: true,
+  pagination: false,
+  arrows: true,
+  trimSpace: false,
 });
 
-nav.addEventListener('click', (e) => {
-  if (e.target.tagName === 'IMG') {
-    splide.go(+e.target.dataset.i);
-  }
-});
+// Sync sliders
+testimonial.sync(avatars);
 
-splide.mount();
+// Mount sliders
+avatars.mount();
+testimonial.mount();
+
+// GSAP fade effect on testimonial
+testimonial.on('move', (newIndex, oldIndex) => {
+  const slides = document.querySelectorAll('#testimonial-slider .splide__slide');
+
+  gsap.to(slides[oldIndex], { opacity: 0, scale: 0.9, duration: 0.5, ease: 'power1.in' });
+
+  gsap.fromTo(
+    slides[newIndex],
+    { opacity: 0, scale: 1.1 },
+    { opacity: 1, scale: 1, duration: 0.5, ease: 'power1.out' }
+  );
+});
