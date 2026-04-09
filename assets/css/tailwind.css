@@ -189,6 +189,29 @@ html.lenis body {
 
 /*  */
 
+#avatar-nav img {
+  transition: all 0.3s ease;
+}
+
+/* Center avatar extra polish */
+#avatar-nav img:nth-child(2) {
+  transform: scale(1.25) translateY(-4px);
+}
+
+/* Optional soft glow */
+#avatar-nav img:nth-child(2) {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Splide arrow cleanup */
+.splide__arrow {
+  background: transparent;
+  font-size: 20px;
+}
+
+.splide__arrow:hover {
+  color: #2563eb;
+}
 
 
 

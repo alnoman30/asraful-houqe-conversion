@@ -66,5 +66,47 @@ if (typeof Lenis !== 'undefined') {
 }
 
 
-// splidejs testimonial
+// 
 
+const splide = new Splide('#testimonial-slider', {
+  type: 'loop',
+  perPage: 1,
+  arrows: true,
+  pagination: false,
+  drag: 'free',
+  snap: true,
+  speed: 400,
+  easing: 'linear',
+});
+
+const nav = document.getElementById('avatar-nav');
+const avatars = Array.from(nav.querySelectorAll('img')); // grab all images
+
+const updateAvatars = (activeIndex) => {
+  avatars.forEach((img, i) => {
+    if (i === activeIndex) {
+      img.classList.add('scale-125', 'opacity-100');
+      img.classList.remove('scale-90', 'opacity-40');
+    } else {
+      img.classList.add('scale-90', 'opacity-40');
+      img.classList.remove('scale-125', 'opacity-100');
+    }
+  });
+};
+
+const fade = (slide) =>
+  gsap.fromTo(slide, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" });
+
+splide.on('mounted active', () => {
+  const active = splide.index % avatars.length; // make sure it loops properly
+  updateAvatars(active);
+  fade(splide.Components.Elements.slides[splide.index]);
+});
+
+nav.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    splide.go(+e.target.dataset.i);
+  }
+});
+
+splide.mount();
