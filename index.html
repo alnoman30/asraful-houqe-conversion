@@ -8,12 +8,12 @@
   </head>
 
   <body>
-    <div class="h-screen flex flex-col bg-offwhite">
+
       <!-- Navbar -->
-      <header
-        class="container flex justify-between items-center px-10 py-5 bg-offwhite"
+      <header class="bg-offwhite"
       >
-        <a href="index.html" class="flex items-center gap-2 font-inter">
+        <div class="container flex justify-between items-center px-10 py-5 ">
+          <a href="index.html" class="flex items-center gap-2 font-inter">
           <div class="w-8 h-8 rounded-full bg-gray">
             <img
               src="assets/images/profile_image.png"
@@ -35,15 +35,16 @@
           >
           <a href="#" class="block hover:text-primary uppercase">DOWNLOAD CV</a>
         </nav>
+        </div>
       </header>
 
       <!-- Hero Section -->
       <section
         class="flex-1 flex md:items-center justify-center whitespace-nowrap overflow-hidden md:overflow-visible relative bg-offwhite"
       >
-        <div class="mt-25 md:mt-0 px-6 mx-auto text-center">
+        <div class="sm:pt-7 pt-10 md:pt-8 px-6 mx-auto text-center">
           <div class="">
-            <h3 class="text-gray inter-tight font-normal text-3xl md:text-4xl">
+            <h3 class="text-gray sm:pt-2 md:pt-8 inter-tight font-normal text-3xl md:text-4xl">
               Hi, My name is Asraful Hoque
             </h3>
           </div>
@@ -75,45 +76,44 @@
 
           <!-- White fade effect -->
           <div
-            class="absolute inset-x-0 bottom-30 md:bottom-0 h-[50%] bg-gradient-to-t from-white via-white via-30% to-transparent blur-sm z-50"
+            class="absolute inset-x-0 bottom-14 sm:bottom-10 md:bottom-0 h-[30%] bg-gradient-to-t from-white via-white via-30% to-transparent blur-sm z-50"
           ></div>
 
           <!-- Buttons -->
           <div
-            class="mt-10 sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5.5 relative z-80"
+            class="mt-20 sm:mt-16 md:mt-20 flex flex-col md:flex-row justify-center items-center gap-3 sm:gap-5.5 relative z-80"
           >
             <a
               href="#"
-              class="w-100 md:w-auto bg-primary text-white inter-tight text-base sm:text-lg font-medium leading-[112%] px-6 sm:px-10 py-3.5 sm:py-3.75 relative overflow-hidden border border-transparent transition-all duration-500 hover:bg-white hover:text-primary hover:border-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
+              class="w-[55%] md:w-auto bg-primary text-white inter-tight text-base sm:text-lg font-medium leading-[112%] px-6 sm:px-10 py-3.5 sm:py-3.75 relative overflow-hidden border border-transparent transition-all duration-500 hover:bg-white hover:text-primary hover:border-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
             >
               <span class="relative z-10">View My Work</span>
             </a>
 
             <button
-              class="w-100 md:w-auto border border-primary text-primary inter-tight text-base sm:text-lg font-medium leading-[112%] px-6 py-3.5 relative overflow-hidden transition-all duration-500 hover:bg-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
+              class="w-[55%] md:w-auto border border-primary text-primary inter-tight text-base sm:text-lg font-medium leading-[112%] px-6 py-3.5 relative overflow-hidden transition-all duration-500 hover:bg-primary before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:w-full"
             >
               <span class="relative z-10">Download Resume</span>
             </button>
           </div>
         </div>
       </section>
-    </div>
 
     <!-- Counter section  -->
 
-    <section class="bg-offwhite -mt-37.5 md:mt-0">
-      <div class="container mx-auto px-4 py-2 md:py-14 relative z-99">
+    <section class="bg-offwhite">
+      <div class="container mx-auto px-4 py-10 sm:py-16  relative z-99">
         <div class="grid grid-cols-3 gap-10 sm:gap-20 text-center">
           <!-- Years Experience -->
           <div class="sm:border-r border-offwhite2">
             <h2
-              class="counter font-bold thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              class="counter font-bold thunder text-[45px] md:text-[96px] text-primary leading-[87%]"
               data-target="7"
             >
               0
             </h2>
             <p
-              class="mt-2 text-xl inter-tight font-medium capitalize text-black2"
+              class="mt-2 text-sm md:text-xl inter-tight font-medium capitalize text-black2"
             >
               Years Experience
             </p>
@@ -122,13 +122,13 @@
           <!-- Projects Delivered -->
           <div class="sm:border-r border-offwhite2">
             <h2
-              class="counter font-bold thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              class="counter font-bold thunder text-[45px] md:text-[96px] text-primary leading-[87%]"
               data-target="50"
             >
               0
             </h2>
             <p
-              class="mt-2 text-xl inter-tight font-medium capitalize text-black2"
+              class="mt-2 text-sm md:text-xl inter-tight font-medium capitalize text-black2"
             >
               Projects Delivered
             </p>
@@ -137,13 +137,13 @@
           <!-- Happy Clients -->
           <div>
             <h2
-              class="counter font-bold thunder text-[64px] sm:text-[96px] text-primary leading-[87%]"
+              class="counter font-bold thunder text-[45px] md:text-[96px] text-primary leading-[87%]"
               data-target="30"
             >
               0
             </h2>
             <p
-              class="mt-2 text-xl inter-tight font-medium capitalize text-black2"
+              class="mt-2 text-sm md:text-xl inter-tight font-medium capitalize text-black2"
             >
               Happy Clients
             </p>
@@ -153,10 +153,10 @@
     </section>
 
     <!-- Core expertise section -->
-    <section class="bg-white py-20">
+    <section class="bg-white py-13.75">
       <div class="container mx-auto px-4 text-center">
         <p
-          class="text-gray2 leading-[112%] uppercase text-2xl md:text-[32px] font-normal mb-12 section-subtitle"
+          class="text-gray2 leading-[112%] uppercase sm:text-2xl md:text-[32px] font-normal mb-12 section-subtitle"
         >
           Core Expertise
         </p>
@@ -251,24 +251,27 @@
         <!-- Heading -->
         <div class="flex justify-between items-center mb-10">
           <h2
-            class="font-bold thunder text-[136px] text-primary leading-[87%] uppercase"
+            class="font-bold thunder sm:text-[63px] md:text-[136px] text-primary leading-[87%] uppercase"
           >
             Featured Work
           </h2>
-<a href="#" class="flex items-center gap-3 inter-tight text-2xl font-bold text-black2 uppercase group">
-  <span class="mask-wrap">
-    <span class="mask-track">
-      <span>View all Projects</span>
-      <span>View all Projects</span>
-    </span>
-  </span>
+          <a
+            href="#"
+            class="flex items-center gap-3 inter-tight text-2xl font-bold text-black2 uppercase group"
+          >
+            <span class="mask-wrap">
+              <span class="mask-track">
+                <span>View all Projects</span>
+                <span>View all Projects</span>
+              </span>
+            </span>
 
-  <img
-    src="assets/images/arrow.svg"
-    alt="arrow"
-    class="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
-  />
-</a>
+            <img
+              src="assets/images/arrow.svg"
+              alt="arrow"
+              class="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </a>
         </div>
 
         <!-- Grid -->
