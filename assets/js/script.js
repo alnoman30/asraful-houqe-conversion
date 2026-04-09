@@ -64,3 +64,7 @@ if (typeof Lenis !== 'undefined') {
 
   gsap.ticker.lagSmoothing(0);
 }
+
+
+// splidejs testimonial
+

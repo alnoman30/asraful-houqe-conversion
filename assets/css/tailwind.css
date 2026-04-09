@@ -22,6 +22,7 @@
   --color-gray3: #4B5563;
   ---color-black: #000;
   --color-black2: #090909;
+  --color-black3: #0A0A0A;
 
   --font-thunder: "Thunder", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
@@ -185,6 +186,8 @@ html.lenis body {
   pointer-events: none;
 }
 
+
+/*  */
 
 
 
