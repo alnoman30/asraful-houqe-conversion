@@ -193,6 +193,7 @@ html.lenis body {
 /* Lenis end */
 
 
+/* ======================== Navbar CSS Start ==================== */
 #navbar {
   position: fixed;
   top: 0;
@@ -413,9 +414,12 @@ html.lenis body {
   color: var(--color-primary, #DE4A33);
 }
 
-/*  navbar end */
+/* ======================== Navbar CSS End ==================== */
 
-/* Testimonial section */
+
+
+
+/* ======================== Testimonial CSS Start ==================== */
 
 .avatar {
   opacity: 0.4;
@@ -424,19 +428,23 @@ html.lenis body {
 }
 
 .avatar-name {
+
+  width: 300px;
   opacity: 0;
   transform: translateY(6px);
   transition: all 0.3s;
 }
 
 .splide__slide.is-active .avatar {
+
   opacity: 1;
   transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(34, 31, 231, 0.4);
   border: 4px solid white;
 }
 
 .splide__slide.is-active .avatar-name {
+  
   opacity: 1;
   transform: translateY(0);
 }
@@ -486,6 +494,10 @@ html.lenis body {
   right: -50px;
 }
 
+
+
+/* ======================== Testimonial CSS End ==================== */
+
 /* Responsive codes */
 @media (max-width:1024px) {
   .section-padding {
@@ -510,6 +522,14 @@ html.lenis body {
     .container {
       padding-inline: 12px;
     }
+
+    .splide__arrow--prev {
+  left: -30px;
+}
+
+.splide__arrow--next {
+  right: -30px;
+}
 
     /* .counter-area{
     padding-bottom: 80px;

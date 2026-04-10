@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonial.go(currentIndex);
     avatars.go(currentIndex);
     showActiveName(currentIndex);
-  }, 2000);
+  }, 4000);
 });
 
 
