@@ -26,23 +26,111 @@ document.querySelectorAll(".counter").forEach((counter) => {
 });
 
 
-// text animation
-const link = document.querySelector(".group");
-const track = link.querySelector(".mask-track");
+// ===============================
+// TEXT HOVER ANIMATION
+// ===============================
+function initTextHoverAnimation(selector) {
+  const elements = document.querySelectorAll(selector);
 
-const tl = gsap.timeline({
-  paused: true
+  elements.forEach((el) => {
+    const track = el.querySelector(".mask-track");
+    if (!track) return;
+
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(track, {
+      y: "-50%",
+      duration: 0.35,
+      ease: "power2.out"
+    });
+
+    el.addEventListener("mouseenter", () => tl.play());
+    el.addEventListener("mouseleave", () => tl.reverse());
+
+    // store timeline if needed later
+    el._gsapTL = tl;
+  });
+}
+
+// Apply hover animation
+initTextHoverAnimation(".filter-btn");
+initTextHoverAnimation(".group");
+
+
+// ===============================
+// TAB FILTER + ANIMATION
+// ===============================
+const buttons = document.querySelectorAll(".filter-btn");
+const projects = document.querySelectorAll(".project-item");
+
+// performance boost
+gsap.set(".project-item", { willChange: "transform, opacity" });
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+
+    // ---------------------------
+    // ACTIVE BUTTON STYLE
+    // ---------------------------
+    buttons.forEach(b => {
+      b.classList.remove("bg-primary", "text-white");
+      b.classList.add("bg-white", "text-gray");
+    });
+
+    btn.classList.remove("bg-white", "text-gray");
+    btn.classList.add("bg-primary", "text-white");
+
+    const filter = btn.getAttribute("data-filter");
+
+    // ---------------------------
+    // ANIMATE OUT
+    // ---------------------------
+    gsap.to(projects, {
+      opacity: 0,
+      y: 40,
+      duration: 0.4,
+      stagger: 0.05,
+      ease: "power2.inOut",
+      onComplete: () => {
+
+        // ---------------------------
+        // FILTER PROJECTS
+        // ---------------------------
+        projects.forEach(project => {
+          const category = project.getAttribute("data-category");
+
+          if (filter === "all" || category === filter) {
+            project.style.display = "grid";
+          } else {
+            project.style.display = "none";
+          }
+        });
+
+        // ---------------------------
+        // ANIMATE IN (ONLY VISIBLE)
+        // ---------------------------
+        const visibleProjects = Array.from(projects).filter(
+          p => p.style.display !== "none"
+        );
+
+        gsap.fromTo(
+          visibleProjects,
+          { opacity: 0, y: 50, scale: 0.98 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: "power3.out"
+          }
+        );
+
+      }
+    });
+
+  });
 });
-
-tl.to(track, {
-  y: "-50%", // move exactly one text height (since 2 items stacked)
-  duration: 0.4,
-  ease: "power2.out"
-});
-
-
-link.addEventListener("mouseenter", () => tl.play());
-link.addEventListener("mouseleave", () => tl.reverse());
 
 
 
@@ -191,3 +279,6 @@ if (hamburger && mobileMenu) {
     });
   });
 }
+
+
+

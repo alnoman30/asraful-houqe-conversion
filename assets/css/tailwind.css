@@ -498,6 +498,19 @@ html.lenis body {
 
 /* ======================== Testimonial CSS End ==================== */
 
+
+
+
+/* =================================== Work page css=================================== */
+
+.filter-btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
 /* Responsive codes */
 @media (max-width:1024px) {
   .section-padding {
