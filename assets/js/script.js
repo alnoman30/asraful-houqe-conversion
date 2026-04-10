@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-// ── Counter Animation ──
+// ── =============  Counter Animation ========================== ──
 document.querySelectorAll(".counter").forEach((counter) => {
   const target = +counter.getAttribute("data-target");
   const obj = {
@@ -134,7 +134,7 @@ buttons.forEach((btn) => {
 
 
 
-// ── Smooth scroll (Lenis) ──
+// ──======================================= Smooth scroll (Lenis)======================================== ──
 if (typeof Lenis !== 'undefined') {
   const lenis = new Lenis({
     duration: 1.4,
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// ── Navbar scroll ──
+// ──============================================= Navbar scroll =========================================──
 const navbar = document.getElementById('navbar');
 
 if (navbar) {
